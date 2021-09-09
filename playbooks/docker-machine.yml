@@ -1,12 +1,8 @@
 - hosts: docker
-  vars:
-    srv:
-      - docker
-      - docker.socket
   tasks:
    - name: Make sure Docker is running.
      service: 
-        name: "{{ srv }}"
+        name: docker
         state: started 
         enabled: yes
         
