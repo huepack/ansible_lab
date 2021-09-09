@@ -10,11 +10,10 @@
   tasks:
    - name: Install Docker
      yum: name={{ pkg }} state=installed
+   
    - name: Make sure Docker is running.
-     service:
-        name: {{ srv }}
-        state: started
-        enabled: yes
+     service: name={{ srv }} state=started enabled=yes
+        
    - name: Install docker-machine
      shell:
         cmd: base=https://github.com/docker/machine/releases/download/v0.16.0 \
