@@ -1,16 +1,9 @@
 - hosts: docker
   vars:
-    pkg:
-      - docker-ce
-      - docker-ce-cli
-      - containerd.io
     srv:
       - docker
       - docker.socket
   tasks:
-   - name: Install Docker
-     dnf: name={{ pkg }} state=present
-   
    - name: Make sure Docker is running.
      service: name={{ srv }} state=started enabled=yes
         
