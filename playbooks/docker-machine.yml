@@ -5,7 +5,10 @@
       - docker.socket
   tasks:
    - name: Make sure Docker is running.
-     service: name={{ srv }} state=started enabled=yes
+     service: 
+        name: "{{ srv }}"
+        state: started 
+           enabled: yes
         
    - name: Install docker-machine
      shell:
