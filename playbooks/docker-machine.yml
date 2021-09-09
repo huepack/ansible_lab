@@ -8,7 +8,7 @@
      service: 
         name: "{{ srv }}"
         state: started 
-           enabled: yes
+        enabled: yes
         
    - name: Install docker-machine
      shell:
