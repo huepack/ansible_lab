@@ -1,4 +1,4 @@
-- hosts: centos2
+- hosts: docker
   tasks:
    - name: Install NTP
      yum: name=chrony state=present
