@@ -9,7 +9,7 @@
       - docker.socket
   tasks:
    - name: Install Docker
-     yum: name={{ pkg }} state=installed
+     dnf: name={{ pkg }} state=installed
    
    - name: Make sure Docker is running.
      service: name={{ srv }} state=started enabled=yes
