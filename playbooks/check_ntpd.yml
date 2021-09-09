@@ -1,7 +1,7 @@
 - hosts: docker
   tasks:
    - name: Install NTP
-     yum: name=chrony state=present
+     dnf: name=chrony state=present
    - name: Make sure ntpd running.
      service: 
         name: chronyd 
