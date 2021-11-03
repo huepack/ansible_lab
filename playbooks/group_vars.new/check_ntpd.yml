@@ -1,0 +1,9 @@
+- hosts: docker
+  tasks:
+   - name: Install NTP
+     dnf: name=chrony state=present
+   - name: Make sure ntpd running.
+     service: 
+        name: chronyd 
+        state: started 
+        enabled: yes
